@@ -1,0 +1,294 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    position: relative;
+    overflow: hidden;
+}
+/*第一屏*/
+.first {
+    padding-top: 80px;
+}
+.first .logo {
+    height: 186px;
+    background: url(../images/logo.png) center center no-repeat;
+}
+.first .text {
+    text-align: center;
+    margin: 80px 0;
+    
+}
+.first .text img {
+    opacity: 0;
+    margin: 0 40px;
+}
+.first .info {
+    width: 772px;
+    height: 79px;
+    background: url(../images/info_1.png) center center no-repeat;
+    margin: 0 auto;
+}
+.current.first .text img {
+    opacity: 1;
+    margin: 0;
+    transition: all 1s ease-out 0.3s;
+}
+/*第二屏*/
+.second{
+    padding: 0 100px;
+}
+.second > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.second .shiled {
+    width: 428px;
+    height: 498px;
+}
+.second .info {
+    width: 635px;
+    height: 309px;
+    background: url(../images/info_2.png);
+}
+.second img {
+    display: block;
+    float: left;
+}
+.second img:nth-child(1) {
+    transform:translate(50px,100px) rotate(45deg) ;
+}
+.current.second img:nth-child(1) {
+    transform: translate(0) rotate(0deg);
+    transition: all 1s ease-out;
+}
+/*第三屏*/
+.third {
+    padding: 0 100px;
+}
+.third>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.third .info {
+    width: 631px;
+    height: 278px;
+    background: url(../images/info_2.png);
+}
+.third .circle {
+    width: 453px;
+    height: 449px;
+    background: url(../images/circle.png);
+}
+.third .rocket {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 230px;
+    height: 204px;
+    background:url(../images/rocket.png) no-repeat;
+    transform: translate(500px, 210px);
+}
+.current.third .rocket {
+    transform: translate(1050px, -400px);
+    transition: all 1s ease-out;
+}
+/*第四屏幕*/
+.fourth {
+    padding: 0 100px;
+}
+.fourth>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.fourth .search {
+    width: 529px;
+    height: 299px;
+    /*background-color: pink;*/
+    position: relative;
+    transform: translateX(-100%);
+
+}
+.fourth .input {
+    width: 529px;
+    height: 66px;
+    background: url(../images/search.png) no-repeat;
+}
+.fourth .text-value {
+    position: absolute;
+    left: 20px;
+    top: 24px;
+    /*width: 99px;*/
+    width: 0;
+    height: 22px;
+    background: url(../images/key.png);
+}
+.fourth .main-content {
+    width: 529px;
+    height: 393px;
+    transform: translateY(-13px);
+    overflow: hidden;
+}
+.fourth .result {
+    width: 100%;
+    height: 100%;
+    background: url(../images/result.png) no-repeat;
+    transform: translateY(-100%);
+
+}
+.fourth .info {
+    width: 612px;
+    height: 299px;
+    background: url(../images/info_4.png) no-repeat;
+}
+.current.fourth .search {
+    transform: translateX(0);
+    transition: all 1s ease-out ;
+}
+.current.fourth .text-value {
+    width: 99px;
+    animation: typing 1.5s steps(5) 1.2s forwards;
+}
+.current.fourth .result {
+    transform: translateY(0);
+    transition: all 1s ease-out 2.8s;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100px;
+    }
+}
+
+/*第5屏*/
+.fifth {
+    padding-top: 100px;
+}
+.fifth >div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fifth .info {
+    width: 1077px;
+    height: 134px;
+    background: url(../images/info_5.png) no-repeat;
+    padding: 85px 0;
+}
+.fifth .web {
+    width: 1004px;
+    margin: 0 auto;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+    /*background-color: pink;*/
+    position: relative;
+}
+.leftline, .topline, .rightline, .bottomline {
+    position: absolute;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.leftline {
+    left: 0;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.topline {
+    top: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translateX(100%);
+    opacity: 0;
+}
+.rightline {
+    right: 0;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translateY(100%);
+    opacity: 0;
+
+}
+.bottomline {
+    bottom: 0;
+    width: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.topbar {
+    width: 1004px;
+    height: 79px;
+    background: url(../images/toolbar.png) no-repeat;
+    opacity: 0;
+}
+.fifth .box {
+    position: absolute;
+    left: 70px;
+    top: 32px;
+    width: 0;
+    /*width: 920px;*/
+    height: 26px;
+    overflow: hidden;
+}
+.fifth .box span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.fifth .footmain {
+    position: absolute;
+    right: 0;
+    bottom: 102px;
+    width: 394px;
+    height: 29px;
+    background: url(../images/extra.png);
+    opacity: 0;
+}
+
+.fifth .footline {
+    width: 100%;
+    position: absolute;
+    bottom: 132px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.current.fifth .leftline {
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+    opacity: 1;
+}
+.current.fifth .topline {
+    transform: translateX(0);
+    transition: all 1s ease-in-out 0.5s;
+    opacity: 1;
+}
+.current.fifth .rightline {
+    transform: translateY(0);
+    transition: all 1s ease-in-out 0.5s;
+    opacity: 1;
+}
+.current.fifth .topbar {
+    transition: all 2s ease-in-out 1.5s;
+    opacity: 1;
+}
+.current.fifth .box {
+    transition: all 1s ease-in-out 1.5s;
+    width: 920px;
+    opacity: 1;
+}
+.current.fifth .footmain {
+    transition: all 1s ease-in-out 1.5s;
+    opacity: 1;
+}
+
+
